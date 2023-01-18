@@ -15,16 +15,19 @@ defineProps({
           :class="[
                 'bread-crumbs__link',
                 {
-                  'bread-crumbs__active-page': item.active
+                  'bread-crumbs__link--active': item.active
                 }
             ]"
-          :to="item.href"
+          :to="item.to"
           tag="button"
       >
         {{ item.text }}
       </router-link>
-      <i v-show="!item.active" class="bread-crumbs__arrow">
-        <svg data-src="/img/icons/arrowRight.svg"/>
+      <i
+          v-show="!item.active"
+          class="bread-crumbs__arrow"
+      >
+        /
       </i>
     </div>
   </div>

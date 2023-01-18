@@ -1,6 +1,5 @@
 .bread-crumbs {
-  padding: 36px 0 19px;
-  @include text;
+  padding: 32px 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -12,22 +11,24 @@
   }
 
   &__link {
-    color: $black_passive;
+    font-family: 'sf-ui-text';
+    font-size: 16px;
+    line-height: 16px;
+    color: #727783;
     transition: color .3s;
-    line-height: 1.6;
 
     &:hover {
       color: #000;
+    }
+
+    &--active {
+      color: #000;
+      cursor: default;
     }
   }
 
   &__arrow {
     display: flex;
     margin: 0 15px;
-  }
-
-  &__active-page {
-    color: $black;
-    cursor: default;
   }
 }
