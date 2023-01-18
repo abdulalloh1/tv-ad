@@ -1,5 +1,33 @@
+@import "./base";
+
+@font-face {
+  src: url('./fonts/SF-UI-Text.otf');
+  font-family: 'sf-ui-text';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('./fonts/SF-PRO-DISPLAY.OTF');
+  font-family: 'sf-pro-display';
+  font-weight: 600;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  font-family: 'sf-pro-display';
+  margin-bottom: 32px;
 }
