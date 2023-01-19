@@ -3,7 +3,7 @@ export const cartModule = {
         cart: JSON.parse(localStorage.getItem('cart')) || []
     }),
     mutations: {
-        addRemoveToCart(state, id: string) {
+        toggleCart(state, id: string) {
             if(state.cart.includes(id)) {
                 const idIndex = state.cart.findIndex((item: string) => item === id)
                 state.cart.splice(idIndex, 1)

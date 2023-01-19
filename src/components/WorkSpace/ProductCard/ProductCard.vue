@@ -19,12 +19,12 @@ const isProductInFavorite = computed(() => {
   return store.state.favoriteModule.favorite.includes(props.data.id)
 })
 
-function addRemoveCart () {
-  store.commit('addRemoveToCart', props.data.id)
+function toggleCart () {
+  store.commit('toggleCart', props.data.id)
 }
 
-function addRemoveFavorite () {
-  store.commit('addRemoveToFavorite', props.data.id)
+function toggleFavorite () {
+  store.commit('toggleFavorite', props.data.id)
 }
 
 </script>
@@ -58,7 +58,7 @@ function addRemoveFavorite () {
       <div class="product-card__utils">
         <button
             class="product-card__utils__btn"
-            @click="addRemoveCart"
+            @click="toggleCart"
         >
           <svg
               :data-src="!isProductInCart ? '/img/icons/cart.svg' : '/img/icons/tick.svg'"
@@ -68,7 +68,7 @@ function addRemoveFavorite () {
             :class="['product-card__utils__btn', 'product-card__heart-btn', {
               'product-card__heart-btn--active': isProductInFavorite
             }]"
-            @click="addRemoveFavorite"
+            @click="toggleFavorite"
         >
           <svg data-src="/img/icons/heart.svg"/>
         </button>

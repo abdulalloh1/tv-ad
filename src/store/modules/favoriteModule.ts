@@ -3,7 +3,7 @@ export const favoriteModule = {
         favorite: JSON.parse(localStorage.getItem('favorite')) || []
     }),
     mutations: {
-        addRemoveToFavorite(state, id: string) {
+        toggleFavorite(state, id: string) {
             if(state.favorite.includes(id)) {
                 const idIndex = state.favorite.findIndex((item: string) => item === id)
                 state.favorite.splice(idIndex, 1)
