@@ -7,8 +7,8 @@ import BreadCrumbs from "../components/UI/AppBreadCrumbs/AppBreadCrumbs.vue";
 import AppSelect from "../components/UI/AppSelect/AppSelect.vue";
 import ProductCard from "../components/WorkSpace/ProductCard/ProductCard.vue";
 
-import productsJson from "../db/items.json"
-import materialsJson from "../db/materials.json"
+import productsJson from "../mocks/items.json"
+import materialsJson from "../mocks/materials.json"
 import { Product } from "../types/product";
 
 const breadCrumbsLinks = [
