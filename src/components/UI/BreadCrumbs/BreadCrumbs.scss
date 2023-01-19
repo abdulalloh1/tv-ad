@@ -13,7 +13,7 @@
   &__link {
     font-family: 'sf-ui-text';
     font-size: 16px;
-    line-height: 16px;
+    line-height: 25px;
     color: #727783;
     transition: color .3s;
 
@@ -30,5 +30,11 @@
   &__arrow {
     display: flex;
     margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .bread-crumbs {
+    padding: 20px 0;
   }
 }
