@@ -33,4 +33,4 @@ defineProps({
   </div>
 </template>
 
-<style lang="scss" src="./BreadCrumbs.scss"/>
+<style lang="scss" src="./AppBreadCrumbs.scss"/>
