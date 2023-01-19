@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+import "external-svg-loader";
+</script>
+
 <template>
   <router-view />
 </template>

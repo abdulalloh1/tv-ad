@@ -7,7 +7,25 @@
 }
 
 @font-face {
-  src: url('./fonts/SF-PRO-DISPLAY.OTF');
+  src: url('./fonts/SFUIText-Medium.ttf');
+  font-family: 'sf-ui-text';
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('./fonts/SF-PRO-DISPLAY-REGULAR.OTF');
+  font-family: 'sf-pro-display';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('./fonts/SF-PRO-DISPLAY-MEDIUM.OTF');
+  font-family: 'sf-pro-display';
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('./fonts/SF-PRO-DISPLAY-Bold.OTF');
   font-family: 'sf-pro-display';
   font-weight: 600;
 }
@@ -20,14 +38,76 @@
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  font-family: 'sf-ui-text';
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
 }
 
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
+
 .page-title {
+  font-family: 'sf-pro-display';
   font-weight: 600;
   font-size: 36px;
   line-height: 48px;
-  font-family: 'sf-pro-display';
   margin-bottom: 32px;
+}
+
+.home {
+  &__filter {
+    display: flex;
+    margin-bottom: 17px;
+
+    &__app-select {
+      max-width: 100%;
+      width: 288px;
+
+      & + & {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -24px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home {
+    &__products {
+      margin: 0 -10px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .page-title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .home {
+    &__filter {
+      flex-direction: column;
+
+      &__app-select {
+        width: 100%;
+
+        & + & {
+          margin: 15px 0 0 0;
+        }
+      }
+    }
+  }
 }
